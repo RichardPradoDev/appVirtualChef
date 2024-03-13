@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, StatusBar, Image, View, Dimensions } from 'react-native';
 
 import vendas from '../../assets/vendas.png'
-import logo from '../../assets/VirtualChef.png'
+import logo from '../../assets/logop.png'
 
 const width = Dimensions.get('screen').width;
 
@@ -11,8 +11,8 @@ export default function ProdutoItem() {
         <View style={styles.container}>
             <Image style={styles.img} source={vendas} />
             <StatusBar style="auto" />
-            <View style={styles.produto}>
-                <Image source={logo} style={styles.logo} resizeMode="contain"/>
+            <View style={styles.logotipo}>
+                <Image source={logo} style={styles.logo} resizeMode="contain" />
                 <Text style={styles.title}>"Livro de Culinária para Iniciantes"</Text>
             </View>
             <Text style={styles.subtitle}>Nosso livro de culinária físico ensina receitas básicas, combinações de lanches perfeitas e harmonizações impecáveis de molhos.</Text>
@@ -38,38 +38,39 @@ const styles = StyleSheet.create({
 
     },
 
-    produto: {
-        display: 'flex',
+    logotipo: {
         width: '100%',
+        flexDirection: "row",
+
     },
 
     logo: {
-        width: 50,
-        height: 50,
+        width: 60,
+        height: 60,
     },
 
     title: {
         fontSize: 18,
         color: 'black',
-        fontWeight: 'bold',
-        backgroundColor: 'white',
         width: '100%',
-        textAlign: 'center',
+        paddingTop: 10,
+        paddingLeft: 10,
+        fontFamily: "ralewayG",
 
     },
     subtitle: {
-        fontSize: 15,
+        fontSize: 16,
         color: 'black',
-        backgroundColor: 'white',
         width: '100%',
         textAlign: 'center',
+        fontFamily: "ralewayM",
     },
     price: {
-        fontSize: 18,
+        fontSize: 16,
         color: 'red',
-        backgroundColor: 'white',
         width: '100%',
         textAlign: 'center',
+        fontFamily: "ralewayM",
     },
 
 });
