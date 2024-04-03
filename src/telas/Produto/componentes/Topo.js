@@ -1,22 +1,24 @@
 import React from "react";
-import { StyleSheet, Text, StatusBar, Image, View, Dimensions } from 'react-native';
+import { StyleSheet, StatusBar, Image, View, Dimensions } from 'react-native';
 
 import vendas from '../../assets/vendas.png'
-import logo from '../../assets/logop.png'
+import logo from '../../../assets/logop.png'
+import Texto from '../../../componentes/texto'
 
+//Captura o tamanho da tela que está rodando no app 
 const width = Dimensions.get('screen').width;
 
-export default function ProdutoItem() {
+export default function Topo() {
     return (
         <View style={styles.container}>
             <Image style={styles.img} source={vendas} />
             <StatusBar style="auto" />
             <View style={styles.logotipo}>
                 <Image source={logo} style={styles.logo} resizeMode="contain" />
-                <Text style={styles.title}>"Livro de Culinária para Iniciantes"</Text>
+                <Texto style={styles.title}>"Livro de Culinária para Iniciantes"</Texto>
             </View>
-            <Text style={styles.subtitle}>Nosso livro de culinária físico ensina receitas básicas, combinações de lanches perfeitas e harmonizações impecáveis de molhos.</Text>
-            <Text style={styles.price}>R$ 49,90</Text>
+            <Texto style={styles.subtitle}>Nosso livro de culinária físico ensina receitas básicas, combinações de lanches perfeitas e harmonizações impecáveis de molhos.</Texto>
+            <Texto style={styles.price}>R$ 49,90</Texto>
         </View>
     )
 
@@ -54,23 +56,20 @@ const styles = StyleSheet.create({
         color: 'black',
         width: '100%',
         paddingTop: 10,
-        paddingLeft: 10,
-        fontFamily: "ralewayG",
-
+        paddingLeft: 10
     },
     subtitle: {
         fontSize: 16,
         color: 'black',
         width: '100%',
-        textAlign: 'center',
-        fontFamily: "ralewayM",
+        textAlign: 'center'
     },
+
     price: {
         fontSize: 16,
         color: 'red',
         width: '100%',
-        textAlign: 'center',
-        fontFamily: "ralewayM",
+        textAlign: 'center'
     },
 
 });
