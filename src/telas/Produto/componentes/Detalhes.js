@@ -1,58 +1,45 @@
-import React from "react";
-import { StyleSheet, Image, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, Image, View, Alert } from 'react-native';
 
-import logo from '../../assets/logop.png'
-import Texto from '../componentes/texto'
+import Texto from '../../../componentes/Texto' //Componente de Exibição de Texto
+import Botao from '../../../componentes/Botao';
+import logop from '../../../../assets/logop.png';
 
-export default function Detalhes() {
-    return (
-        <View style={styles.container}>
-            <View style={styles.logotipo}>
-                <Image source={logo} style={styles.logo} resizeMode="contain" />
-                <Texto style={styles.title}>"Livro de Culinária para Iniciantes"</Texto>
-            </View>
-            <Texto style={styles.subtitle}>Nosso livro de culinária físico ensina receitas básicas, combinações de lanches perfeitas e harmonizações impecáveis de molhos.</Texto>
-            <Texto style={styles.price}>R$ 49,90</Texto>
+export default function Detalhes({ nome, detalhes, preco, textoBotao }) {
+    return <View style={styles.produto}>
+        <View style={styles.logo}>
+            <Image style={styles.logop} source={logop} resizeMode='contain' />
+            <Texto style={styles.nome}>{nome}</Texto>
         </View>
-    )
-
+        <Texto style={styles.descricao}>{detalhes}</Texto>
+        <Texto style={styles.preco}>{preco}</Texto>
+        <Botao source={textoBotao} textoBotao={"Adicionar na lista de Desejos"} acaoBotao={() => Alert.alert("Em breve", "Estamos preparando uma novidade para você")} />
+    </View>
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#EAE4D8',
-        alignItems: 'center',
-        paddingTop: '20%',
-        width: '100%',
-        height: 400 / 400 * width,
-    },
-    img: {
-        width: 400,
-        height: 400,
+    nome: {
+        color: "black",
+        fontSize: 20,
+        textAlign: "center",
         margin: 10,
-
+        fontWeight: 'bold'
     },
-
-    logotipo: {
-        width: '100%',
-        flexDirection: "row",
-
+    descricao: {
+        color: "black",
+        fontSize: 18,
+        textAlign: "center"
     },
-
     logo: {
-        width: 60,
-        height: 60,
+        flexDirection: 'row',
     },
-    subtitle: {
-        fontSize: 16,
-        color: 'black',
-        width: '100%',
-        textAlign: 'center'
+    logop: {
+        width: 80,
+        height: 80,
     },
 
-    price: {
-        fontSize: 16,
+    preco: {
+        fontSize: 18,
         color: 'red',
         width: '100%',
         textAlign: 'center'

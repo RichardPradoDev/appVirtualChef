@@ -1,12 +1,11 @@
-import React from "react";
-import Topo from '../Produto/componentes/Topo';
-import Detalhes from "../Produto/componentes/Detalhes";
+import React from 'react';
 
+import Topo from './componentes/Topo'
+import Detalhes from './componentes/Detalhes'
 
-export default function Index() {
+export default function Index({ topo, detalhes }) {
     return <>
-        <Topo />
-        <Detalhes />
+        <Topo {...topo} />
+        <Detalhes {...detalhes} />
     </>
-
 }

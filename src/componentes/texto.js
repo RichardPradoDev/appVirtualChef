@@ -3,21 +3,25 @@ import { Text, StyleSheet } from "react-native";
 
 export default function Texto({ children, style }) {
 
-    //Determina a formatação padrão do componente
-    let estilo = estilos.texto;
-    //Verifica se deve exibir em negrito 
-    if (style.fontWeight == "bold") {
-        estilo = estilos.textoNegrito;
+    //Define a estilização padrão do campo
+    let estilo = styles.texto;
+
+    //Verifica se deve exibir a fonte em negrito
+    if (style?.fontWeight === "bold") {
+        //Negrito, muda a estilização
+        estilo = styles.textoNegrito;
     }
 
-    return <Text style={[style, estilos.texto]}>{children}</Text>;
+    return <Text style={[style, estilo]}>{children}</Text>
 }
 
-const estilos = StyleSheet.create({
+const styles = StyleSheet.create({
     texto: {
         fontFamily: "ralewayP",
+        fontWeight: "normal"
     },
     textoNegrito: {
         fontFamily: "ralewayG",
+        fontWeight: "normal"
     }
-});
+})
