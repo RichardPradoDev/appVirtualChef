@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         color: "black",
         fontSize: 20,
         textAlign: "center",
-        margin: 10,
+        margin: 8,
         fontWeight: 'bold'
     },
     descricao: {
@@ -34,8 +34,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     logop: {
-        width: 80,
-        height: 80,
+        width: 50,
+        height: 50,
     },
 
     preco: {

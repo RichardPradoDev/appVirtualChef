@@ -11,8 +11,9 @@ const width = Dimensions.get('screen').width;
 export default function Topo({ titulo }) {
     return <>
         <StatusBar />
-        <Texto style={styles.titulo}>{titulo}</Texto>
+
         <Image source={Header} style={styles.topo} />
+        <Texto style={styles.titulo}>{titulo}</Texto>
 
     </>
 }
@@ -22,4 +23,16 @@ const styles = StyleSheet.create({
         width: "100%",
         height: 1197 / 1600 * width,
     },
+    titulo: {
+        width: "100%",
+        position: "absolute",
+        textAlign: "right",
+        fontSize: 22,
+        color: "white",
+        paddingTop: 10,
+        fontWeight: "bold"
+
+    }
+
+
 });
