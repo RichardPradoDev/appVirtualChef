@@ -11,7 +11,6 @@ const width = Dimensions.get('screen').width;
 export default function Topo({ titulo }) {
     return <>
         <StatusBar />
-
         <Image source={Header} style={styles.topo} />
         <Texto style={styles.titulo}>{titulo}</Texto>
 

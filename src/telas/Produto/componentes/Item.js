@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Image, StyleSheet } from "react-native";
+
 import Texto from '../../../componentes/Texto'
 
 export default function item({ item: { nome, imagem } }) {
