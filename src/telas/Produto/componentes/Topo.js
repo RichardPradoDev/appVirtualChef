@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Dimensions, Image, StatusBar } from 'react-native';
 
-import Header from '../../../../assets/produtos/livroiniciante.png'
+import Header from '../../../../assets/produtos/kitBasico.jpg'
 
 import Texto from '../../../componentes/Texto' //Componente de Exibição de Texto
 

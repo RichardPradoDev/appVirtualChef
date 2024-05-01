@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, View } from 'react-native';
+import { FlatList } from 'react-native';
 
 import Topo from './componentes/Topo'
 import Detalhes from './componentes/Detalhes'
@@ -8,15 +8,18 @@ import Texto from '../../componentes/Texto';
 
 export default function Index({ topo, detalhes, itens }) {
 
-    return <FlatList
-        data={itens.lista}
-        renderItem={Item}
-        keyExtractor={itens.lista.id}
-        ListHeaderComponent={() => {
-            return <>
-                <Topo {...topo} />
-                <Detalhes {...detalhes} />
-            </>
-        }}
-    />
+    return <>
+        <Texto>{itens.titulo}</Texto>
+        <FlatList
+            data={itens.lista}
+            renderItem={Item}
+            keyExtractor={itens.lista.id}
+            ListHeaderComponent={() => {
+                return <>
+                    <Topo {...topo} />
+                    <Detalhes {...detalhes} />
+                </>
+            }}
+        />
+    </>
 }

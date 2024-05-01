@@ -5,7 +5,7 @@ import Texto from '../../../componentes/Texto'
 
 export default function item({ item: { nome, imagem } }) {
     return <View key={nome} style={styles.item}>
-        <Image source={imagem} style={styles.imagens} />
+        <Image source={imagem} style={styles.imagem} resizeMode="contain" />
         <Texto style={styles.nome}>{nome}</Texto>
     </View>
 }
@@ -28,5 +28,7 @@ const styles = StyleSheet.create({
     imagem: {
         width: 80,
         height: 80,
+        borderRadius: 10,
+        marginLeft: 10,
     }
 })
