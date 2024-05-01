@@ -21,8 +21,7 @@ const styles = StyleSheet.create({
     nome: {
         color: "black",
         fontSize: 20,
-        textAlign: "center",
-        margin: 8,
+        margin: 10,
         fontWeight: 'bold'
     },
     descricao: {
@@ -46,3 +45,4 @@ const styles = StyleSheet.create({
     },
 
 });
+

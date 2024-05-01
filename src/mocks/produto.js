@@ -1,7 +1,7 @@
 import kitBasico from '../../assets/produtos/kitBasico.jpg'
 import kitFacas from '../../assets/produtos/kitFacas.jpg'
 import avental from '../../assets/produtos/avental.jpg'
-import kitUltil from '../../assets/produtos/kitUtil.jpg'
+import kitUtensilios from '../../assets/produtos/kitUtensilios.jpg'
 
 const produto = {
     topo: {
@@ -15,21 +15,22 @@ const produto = {
         botao: "Adicionar a lista de desejos",
     },
     itens: {
+        titulo: "Itens do Kit",
         lista: [
             {
                 id: 1,
-                nome: "1x ",
+                nome: "1 Kit com 5 facas",
                 imagem: kitFacas,
             },
             {
                 id: 2,
-                nome: "1x  ",
+                nome: "1 Avental  ",
                 imagem: avental,
             },
             {
                 id: 3,
-                nome: "1x ",
-                imagem: kitUltil,
+                nome: "1 Kit de utensílios",
+                imagem: kitUtensilios,
             },
         ]
     }

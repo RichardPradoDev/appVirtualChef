@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         height: 1197 / 1600 * width,
     },
     titulo: {
-        width: "100%",
+        width: "95%",
         position: "absolute",
         textAlign: "right",
         fontSize: 22,
