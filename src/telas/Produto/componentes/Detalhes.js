@@ -13,7 +13,7 @@ export default function Detalhes({ nome, detalhes, preco, textoBotao }) {
         </View>
         <Texto style={styles.descricao}>{detalhes}</Texto>
         <Texto style={styles.preco}>{preco}</Texto>
-        <Botao source={textoBotao} textoBotao={"Adicionar na lista de Desejos"} acaoBotao={() => Alert.alert("Em breve", "Estamos preparando uma novidade para você")} />
+        <Botao source={textoBotao} acaoBotao={() => { Alert.alert("Em breve", "Estamos preparando uma novidade para você") }} />
     </View>
 }
 
