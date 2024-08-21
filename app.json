@@ -14,6 +14,17 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "plugins": [
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Virtual-Chef to access your camera",
+          "microphonePermission": "Allow Virtual-Chef to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ]
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -25,9 +36,6 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      "expo-font"
-    ]
+    }
   }
 }

@@ -1,12 +1,10 @@
 import Logo from '../../assets/logo.png';
-import livro_Iniciante from '../../assets/produtos/livroIniciante.jpeg';
 
 const sobre = {
     textos: {
         logo: Logo,
-        livro_Iniciante: livro_Iniciante,
-        historia: "Iniciamos no dia 10/02/2023, com o grande aumento das redes sociais, notamos o aumento de influencers que gostam de fazer receitas então aproveitamos esse novo mundo para mostrar um pouco do nosso trabalho.",
-        texto_imagem: "Este é nosso livro iniciante, que mostra desde receitas báiscas até receitas mais elaboradas e completas. Para todas as culturas conhecidas."
+        historia: "Bem-vindo ao Virtual Chef, onde a paixão pela culinária encontra a conveniência moderna. Fundada em 10 de fevereiro de 2023, nossa missão é inspirar uma comunidade de entusiastas gastronômicos, oferecendo uma variedade de livros de culinária e produtos de alta qualidade. Nosso objetivo é proporcionar uma experiência única e enriquecedora, com recursos educacionais e inspiração para alcançar seus objetivos culinários. Junte-se a nós nesta jornada culinária e faça parte de uma comunidade vibrante de amantes da culinária.",
+
     }
 }
 

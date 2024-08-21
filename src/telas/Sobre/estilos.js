@@ -1,16 +1,12 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     logo: {
         width: 300,
         height: 300,
         alignSelf: "center",
 
-    },
-    fotoProduto: {
-        height: 500,
-        alignSelf: "center"
     },
     sobre: {
         backgroundColor: "#E9E3D5",
@@ -22,9 +18,15 @@ const style = StyleSheet.create({
         fontSize: 20,
         lineHeight: 26,
         marginBottom: 10,
-        color: "white",
+        color: "black",
         textAlign: "justify",
     },
+    video: {
+        width: '100%',
+        height: 200, // Certifique-se de que a altura está definida
+        marginBottom: 20,
+    },
+
 })
 
-export default StyleSheet;
+export default styles;

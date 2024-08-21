@@ -1,33 +1,43 @@
 import React from 'react';
-import { FlatList, View } from 'react-native';
+import { FlatList, ScrollView, View, Text, StyleSheet } from 'react-native';
 
-import Topo from './componentes/Topo'
-import Detalhes from './componentes/Detalhes'
-import Item from './componentes/Item'
-import Texto from '../../componentes/Texto';
+import ProdutosCard from '../../componentes/produtosCard.js';
 
-export default function Index({ topo, detalhes, itens }) {
-    return <FlatList
-        data={itens.lista}
-        renderItem={Item}
-        keyExtractor={itens.lista.nome}
-        ListHeaderComponent={() => {
-            return <>
-                <Topo {...topo} />
-                <View>
-                    <Detalhes {...detalhes} />
-                    <Texto style={style.titulo}>{itens.titulo}</Texto>
-                </View>
-            </>
-        }}
-    />
+import produtos from '../../mocks/produto.js';
+
+export default function Produtos() {
+    return (
+        <View style={styles.container}>
+            <View style={styles.tituloContainer}>
+                <Text style={styles.titulo}>Veja nossos produtos</Text>
+            </View>
+            <FlatList
+                data={produtos}
+                renderItem={({ item }) => (
+                    <ProdutosCard nome={item.nome} imagem={item.imagem} preco={item.preco} />
+                )}
+                keyExtractor={item => item.id}
+                numColumns={2}
+                contentContainerStyle={styles.flatListContent}
+            />
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
+
+    container: {
+        flex: 1,
+        backgroundColor: '#F2F2F2',
+    },
+    flatListContent: {
+        padding: 16,
+    },
     titulo: {
-        fontSize: 26,
-        color: "black",
-        fontWeight: "bold",
-        marginLeft: 10,
-    }
+        textTransform: 'uppercase',
+        fontSize: 22,
+        marginTop: 16,
+        alignItems: 'center',
+        textAlign: 'center'
+    },
 })

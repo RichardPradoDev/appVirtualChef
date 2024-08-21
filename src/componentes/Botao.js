@@ -5,8 +5,8 @@ import Texto from "./Texto";
 
 export default function Botao({ textoBotao, acaoBotao }) {
     return <TouchableOpacity style={[styles.botao]} onPress={acaoBotao}>
-                <Texto style={styles.botaoTexto}>{textoBotao}</Texto>
-            </TouchableOpacity>
+        <Texto style={styles.botaoTexto}>{textoBotao}</Texto>
+    </TouchableOpacity>
 }
 
 const styles = StyleSheet.create({
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     },
     botaoTexto: {
         textAlign: "center",
-        color: "#FFFFFF",
+        color: "white",
         fontSize: 18,
         lineHeight: 26,
         fontWeight: "bold",

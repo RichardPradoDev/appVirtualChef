@@ -23,5 +23,5 @@ const styles = StyleSheet.create({
     textoNegrito: {
         fontFamily: "ralewayG",
         fontWeight: "normal"
-    }
+    },
 })
